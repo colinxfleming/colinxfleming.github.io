@@ -34,3 +34,5 @@ collections:
   - posts
   - projects
   - talks
+
+show_excerpts: true

@@ -18,7 +18,7 @@ layout: default
         <span class="project-meta">{{ project.date | date: date_format }}</span>
         <h3>
           <a class="project-link" href="{{ project.url | relative_url }}">
-            {{ project.title | escape }}
+            {{ project.title | escape }}: {{ project.dek | escape }}
           </a>
         </h3>
         {%- if site.show_excerpts -%}
@@ -30,7 +30,7 @@ layout: default
   {%- endif -%}
 
   {%- if site.talks.size > 0 -%}
-    <h2 class="talk-list-heading">{{ page.list_title | default: "Projects" }}</h2>
+    <h2 class="talk-list-heading">{{ page.list_title | default: "Talks" }}</h2>
     <ul class="talk-list">
       {%- for talk in site.talks -%}
       <li>
