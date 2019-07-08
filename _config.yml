@@ -1,6 +1,7 @@
-title: "Colin Fleming, Web and Data Engineer"
-email: c3flemin@example.com
+title: "Colin Fleming"
+email: c3flemin@gmail.com
 description: >-
+  Hey, y'all like posting?
   Personal site for Colin Fleming, a web and data engineer. Specializes in
   Ruby, SQL, Python, with some JavaScript and CSS thrown in for good measure.
   Project lead at DCAF Engineering, former board member of the DC Abortion
@@ -8,7 +9,7 @@ description: >-
 baseurl: "/"
 url: "https://colinxfleming.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
-github_username:  colinxfleming
+github_username: colinxfleming
 
 markdown: kramdown
 theme: minima
@@ -27,3 +28,9 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - run.sh
+
+collections_dir: collections
+collections:
+  - posts
+  - projects
+  - talks
