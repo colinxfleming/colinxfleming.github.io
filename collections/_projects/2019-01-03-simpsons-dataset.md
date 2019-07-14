@@ -1,12 +1,11 @@
 ---
 layout: post
 title:  "Simpsons Data"
-dek:    "An assembled set of Simpsons episode data"
+dek:    "An open dataset of Simpsons data"
 date:   2019-01-03 00:00:00 -0000
 categories: project
-excerpt: what if stuff, but good?
+excerpt: "Powering an API that knows the good Simpsons epsiodes requires cataloging the good Simpsons episodes."
+project_url: "https://github.com/colinxfleming/simpsons_data"
 ---
 
-cats cats cats
-
-caaats
+experiments in JSON and YAML compilation

@@ -1,12 +1,15 @@
 ---
 layout: post
 title:  "Simpsons Optimizer"
-dek:    "A Simpsons API to make watching random good episodes easier"
+dek:    "A Simpsons JSON and Redirect API"
 date:   2019-01-02 00:00:00 -0000
 categories: project
-excerpt: what if stuff, but good?
+excerpt: "An API around a Simpsons dataset, to make picking random good episodes easier."
+project_url: "http://www.simpsonsoptimizer.com/"
 ---
 
-cats cats cats
+[SimpsonsWorld](https://www.simpsonsworld.com) is right up there with the wheel and agriculture for great accomplishments of human civilization. It is a Simpsons-specific service that allows streaming of every Simpsons episode (if you have a cable login). However,
 
-caaats
+The main utility of this is providing a URL that you can go to in the event that you'd like to 
+
+This was written in server-side javascript as an excuse to try out Express. (Express is nice.)

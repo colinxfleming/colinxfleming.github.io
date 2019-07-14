@@ -10,14 +10,12 @@ layout: default
   {{ content }}
 
   {%- if site.projects.size > 0 -%}
-    <h2 class="project-list-heading">{{ page.list_title | default: "Projects" }}</h2>
+    <h2 class="project-list-heading">{{ page.list_title | default: "Stuff on the Internet" }}</h2>
     <ul class="project-list">
       {%- for project in site.projects -%}
       <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="project-meta">{{ project.date | date: date_format }}</span>
         <h3>
-          <a class="project-link" href="{{ project.url | relative_url }}">
+          <a class="project-link" href="{{ project.url | relative_url }}" target="_blank">
             {{ project.title | escape }}: {{ project.dek | escape }}
           </a>
         </h3>
