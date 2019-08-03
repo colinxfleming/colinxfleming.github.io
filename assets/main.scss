@@ -2,3 +2,33 @@
 ---
 
 @import "minima";
+
+body {
+}
+
+$mild-white: #f0fff0;
+$grayish: #222;
+
+$light-blue: #add8e6;
+$med-blue: #0000ff;
+
+a, a:hover, a:visited {
+  color: $light-blue;
+}
+
+a:active {
+  color: $medium-blue;
+}
+
+
+.site-header, .site-footer {
+  background-color: $grayish;
+  color: $light-blue;
+}
+
+.page-content {
+  color: $mild-white;
+  background-color: $grayish;
+
+}
+
