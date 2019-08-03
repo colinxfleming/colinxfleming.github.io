@@ -1,6 +1,8 @@
 title: "Colin Fleming"
 email: c3flemin@gmail.com
 baseurl: "/"
+description: An Internet
+
 url: "https://colinxfleming.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: colinxfleming
 linkedin_username: colinxfleming
