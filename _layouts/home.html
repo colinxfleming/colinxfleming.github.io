@@ -9,62 +9,62 @@ layout: default
 
   {{ content }}
 
-  {%- if site.projects.size > 0 -%}
-    <h2 class="project-list-heading">{{ page.list_title | default: "Projects on the Internet" }}</h2>
-    <ul class="project-list">
+
+  <div class="stuff-on-internet">
+    {%- if site.projects.size > 0 -%}
+      <h2 class="project-list-heading cluster">{{ page.list_title | default: "Projects on the Internet" }}</h2>
       {%- for project in site.projects -%}
-      <li>
-        <h3>
-          <a class="project-link" href="{{ project.project_url | relative_url }}" target="_blank">
-            {{ project.title | escape }}: {{ project.dek | escape }}
-          </a>
-        </h3>
-        {{ project.content }}
-      </li>
+        <div class="item">
+          <h3>
+            <a class="project-link" href="{{ project.project_url }}" target="_blank">
+              {{ project.title | escape }}: {{ project.dek | escape }}
+            </a>
+          </h3>
+          <div class="content">
+            {{ project.content }}
+          </div>
+        </div>
       {%- endfor -%}
-    </ul>
-  {%- endif -%}
+    {%- endif -%}
 
-  {%- if site.talks.size > 0 -%}
-    <h2 class="talk-list-heading">{{ page.list_title | default: "Conference talks" }}</h2>
-    <ul class="talk-list">
+    {%- if site.talks.size > 0 -%}
+      <h2 class="talk-list-heading cluster">{{ page.list_title | default: "Conference talks" }}</h2>
       {%- for talk in site.talks -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="talk-meta">{{ talk.date | date: date_format }}</span>
-        <h3>
-          <a class="talk-link" href="{{ talk.project_url }}">
-            {{ talk.title | escape }}
-          </a>
-          <br />          
-          <a href="{{ talk.project_url }}" target="_blank">(video)</a> <a href="{{ talk.slides_url }}" target="_blank">(slides)</a>
-        </h3>
-        {{ talk.content }}
-      </li>
+        <div class="item">
+          <h3>
+            <a class="talk-link" href="{{ talk.project_url }}">
+              {{ talk.title | escape }}
+            </a>
+            <br />          
+            <a href="{{ talk.project_url }}" target="_blank">(video)</a> <a href="{{ talk.slides_url }}" target="_blank">(slides)</a>
+          </h3>
+          <div class="content">
+            {{ talk.content }}
+          </div>          
+        </div>
       {%- endfor -%}
-    </ul>
-  {%- endif -%}
+    {%- endif -%}
 
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Blogging" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
+    {%- if site.posts.size > 0 -%}
+      <h2 class="post-list-heading">{{ page.list_title | default: "Blogging" }}</h2>
+      <ul class="post-list">
+        {%- for post in site.posts -%}
+        <li>
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          <span class="post-meta">{{ post.date | date: date_format }}</span>
+          <h3>
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </h3>
+          {%- if site.show_excerpts -%}
+            {{ post.excerpt }}
+          {%- endif -%}
+        </li>
+        {%- endfor -%}
+      </ul>
 
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  {%- endif -%}
-
+      <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+    {%- endif -%}
+  </div>
 </div>

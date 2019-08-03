@@ -8,27 +8,38 @@ body {
 
 $mild-white: #f0fff0;
 $grayish: #222;
-
 $light-blue: #add8e6;
-$med-blue: #0000ff;
+$medium-blue: #add;
 
-a, a:hover, a:visited {
-  color: $light-blue;
+
+@mixin link-styling {
+  a, a:hover, a:visited, a:active {
+    color: $light-blue;
+  }
 }
-
-a:active {
-  color: $medium-blue;
-}
-
 
 .site-header, .site-footer {
   background-color: $grayish;
   color: $light-blue;
+
+  @include link-styling
 }
 
 .page-content {
   color: $mild-white;
   background-color: $grayish;
 
+  @include link-styling;
 }
 
+.stuff-on-internet {
+  .content {
+    font-size: 14px;  
+  }
+
+  @include link-styling;
+}
+
+.cluster {
+  border-bottom: 1px solid $mild-white;
+}
